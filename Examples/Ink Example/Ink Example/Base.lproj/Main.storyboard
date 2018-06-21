@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ium-DG-2ky">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="97M-dN-bxL">
+            <objects>
+                <navigationController id="Ium-DG-2ky" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="XwD-A7-hIa">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Tdf-NZ-pd0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c27-qg-7L5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1446" y="-631"/>
+        </scene>
+        <!--Hello Ink-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ink_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="ThemeView" customModule="Ink">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, Ink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHI-2t-JHt" customClass="ThemeLabel" customModule="Ink">
+                                <rect key="frame" x="136.5" y="86" width="102" height="31.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="textColorName" value="text"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="jog-dK-rji">
+                                <rect key="frame" x="116" y="133" width="142" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Darkness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FvP-E9-5bV" customClass="ThemeLabel" customModule="Ink">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="textColorName" value="text"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d9o-bQ-g2z">
+                                        <rect key="frame" x="93" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="didChangeDarkness:" destination="BYZ-38-t0r" eventType="valueChanged" id="JUQ-XX-n4b"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not a theme label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIr-w5-z5E" customClass="NotAThemeLabel" customModule="Ink_Example" customModuleProvider="target">
+                                <rect key="frame" x="119.5" y="216.5" width="135" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I have no dark theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cp9-5O-gI8" customClass="ThemeLabel" customModule="Ink">
+                                <rect key="frame" x="107.5" y="274.5" width="160" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.80610767772382985" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="textColorName" value="nodark"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XHI-2t-JHt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1YW-Hr-96O"/>
+                            <constraint firstItem="cp9-5O-gI8" firstAttribute="top" secondItem="gIr-w5-z5E" secondAttribute="bottom" constant="37.5" id="522-Aw-fmg"/>
+                            <constraint firstItem="gIr-w5-z5E" firstAttribute="top" secondItem="jog-dK-rji" secondAttribute="bottom" constant="52.5" id="OyE-gX-WDt"/>
+                            <constraint firstItem="gIr-w5-z5E" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="P3m-3X-WRM"/>
+                            <constraint firstItem="cp9-5O-gI8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Zyo-9r-B7o"/>
+                            <constraint firstItem="XHI-2t-JHt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="86" id="bzd-GS-kEn"/>
+                            <constraint firstItem="jog-dK-rji" firstAttribute="top" secondItem="XHI-2t-JHt" secondAttribute="bottom" constant="16" id="cLT-3m-S3P"/>
+                            <constraint firstItem="jog-dK-rji" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="isQ-s6-EZq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="backgroundColorName" value="background"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" title="Hello Ink" id="UYA-tR-oEa"/>
+                    <connections>
+                        <outlet property="darknessSwitch" destination="d9o-bQ-g2z" id="GNv-w0-dy2"/>
+                        <outlet property="helloLabel" destination="XHI-2t-JHt" id="KrO-cc-lxB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
